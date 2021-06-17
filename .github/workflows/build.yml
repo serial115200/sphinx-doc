@@ -1,0 +1,32 @@
+name: build sphinx image
+
+on:
+  push:
+    tags:
+          - "*"
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        with:
+            ref: ${{ github.event.ref }}
+      - 
+        name: build and push image
+        uses: docker/build-push-action@v1.1.0
+        with:
+          tags: latest
+          tag_with_ref: true
+          repository: ${{ github.repository }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      -
+        name: Update repo description
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: ${{ github.repository }}

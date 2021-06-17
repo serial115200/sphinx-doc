@@ -1,0 +1,10 @@
+{
+    "workbench.tree.renderIndentGuides": "always",
+    "editor.rulers": [
+        80,
+        100
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "restructuredtext.preview.sphinx.disabled": true,
+    "restructuredtext.confPath": "${workspaceFolder}"
+}
