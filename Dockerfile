@@ -26,6 +26,6 @@ RUN ${APK_INSTALL} --virtual .build-deps build-base jpeg-dev zlib-dev && \
 # -v $(pwd):/docs
 WORKDIR /docs
 
-EXPOSE 9000 35729
+EXPOSE 8000 35729
 
 CMD ["make", "livehtml"]

@@ -14,7 +14,7 @@ Sphinx Dokcer 镜像，用于个人书写文档，支持实时构建功能，包
 
 ## 镜像
 
-* [serial115200/sphinx-doc](https://hub.docker.com/repository/docker/serial115200/sphinx-doc)
+* [serial115200/sphinx-doc](https://hub.docker.com/r/serial115200/sphinx-doc)
 
 
 ## 使用
@@ -45,5 +45,16 @@ livehtml:
 docker run -d --rm  --user "$(id -u):$(id -g)" -p 127.0.0.1:9000:8000 -v $(pwd):/docs sphinx-doc
 ```
 
-网络映射限定为 127.0.0.1，避免暴露端口。
-    
+网络映射限定为 127.0.0.1，避免暴露端口，远程编辑时，建议使用 SSH 端口转发，而不是允许公网访问。
+
+## 建议
+
+Windows 用户使用 docker 存在些许麻烦，以下建议或许有所帮助。
+
+* 购买最低配置的云服务器，而后安装 docker 、make 和 git
+* VScode 作为编辑器，并安装 Remote - SSH 与 reStructuredText 扩展
+* 编辑文档时，使用 VScode 远程至云服务器，在自带的终端中 init git 库并创建 Sphinx 项目
+* 实时构建 html 文档时，使用 VScode 的端口转发功能，而后打开 http://localhost:9000
+
+
+
