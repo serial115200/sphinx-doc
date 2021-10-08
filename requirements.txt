@@ -1,4 +1,14 @@
-sphinx==4.0.2
+sphinx==4.1.2
+
 sphinx-autobuild
+
+sphinx-book-theme
 sphinx-rtd-theme
+
+sphinx-copybutton
+sphinx-tabs
+sphinx-prompt
+
+sphinxcontrib-programoutput
+
 Pillow

@@ -4,7 +4,8 @@
         100,
         120
     ],
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 120,
     "restructuredtext.preview.sphinx.disabled": true,
-    "restructuredtext.confPath": "${workspaceFolder}"
+    "restructuredtext.confPath": "${workspaceFolder}",
 }
