@@ -9,6 +9,4 @@ sphinx-copybutton
 sphinx-tabs
 sphinx-prompt
 
-sphinxcontrib-programoutput
-
 Pillow
