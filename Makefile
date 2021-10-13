@@ -5,7 +5,7 @@ PIP_SOURCE=mirrors.cloud.tencent.com
 APT_SOURCE=mirrors.cloud.tencent.com
 
 all: soruce
-	docker build -t sphinx-doc . --build-arg BUILD_ENV=local
+	docker build -t sphinx-doc .
 
 .PHONY: clean soruce
 

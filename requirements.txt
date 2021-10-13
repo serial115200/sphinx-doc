@@ -1,12 +1,11 @@
-sphinx==4.1.2
-
 sphinx-autobuild
 
-sphinx-book-theme
-sphinx-rtd-theme
+sphinxcontrib-versioning
 
-sphinx-copybutton
+sphinx-rtd-theme
+sphinx-book-theme
+sphinx_press_theme
+
 sphinx-tabs
 sphinx-prompt
-
-Pillow
+sphinx-copybutton
